@@ -24,41 +24,33 @@ O Data Analysis permite importar uma base de dados, realizar um tratamento inici
 ## Código
 
 ```python
-# importar e e tratar a base de dados
 from tkinter.filedialog import askopenfilename
 import pandas as pd
+import plotly.express as px
 
-# path da base de dados
 database = 'C:/Users/gamej/OneDrive/Área de Trabalho/Data-Analysis---Projeto-Python/src/example_database/ClientesBanco.csv'
 
-# importando a base de dados
 database_import = pd.read_csv(database, encoding='latin1')
 pd.set_option('display.max_columns', None) # tira o limite de colunas na visualização
 display(database_import)
 
 # Tratamento
 
-# excluindo colunas desnecessárias na análise
 database_import = database_import.drop('CLIENTNUM', axis=1) # axis é eixo, 0 para LINHA e 1 para COLUNA
 # print(database_import)
 
-# verificando se falta alguma informação, se sim, será removida
-# display(database_import.info()) # dá um resumo geral de todas as colunas, com o numero de linhas NÂO VAZIAS e o tipo de dado
+# display(database_import.info()) 
 
 database_import = database_import.dropna() # aqui estamos excluindo TODOS os valores vazios
 
 # display(database_import.info())
 
-# pedindo uma descrição de alguns valores numéricos (média, valor máximo, mínimo e etc)
 display(database_import.describe().round(2))
 
 value_CxC = database_import['Categoria'].value_counts()
 display(value_CxC)
 percent_CxC = database_import['Categoria'].value_counts(normalize=True)
 display(percent_CxC)
-
-# biblioteca responsavel por criar graficos
-import plotly.express as px
 
 for i in database_import:
     grafico = px.histogram(database_import, x= i, color='Categoria')
