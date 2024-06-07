@@ -36,7 +36,7 @@ display(database_import)
 
 # Tratamento
 
-database_import = database_import.drop('CLIENTNUM', axis=1) # axis é eixo, 0 para LINHA e 1 para COLUNA
+database_import = database_import.drop('CLIENTNUM', axis=1) 
 # print(database_import)
 
 # display(database_import.info()) 
