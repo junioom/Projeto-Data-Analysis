@@ -1,6 +1,6 @@
 # Data Analysis
 
-Data Analysis é um projeto desenvolvido para me introduzir à área de análise de dados utilizando Python. A base de dados utilizada neste projeto é fictícia e foi obtida do Kaggle. Este projeto serviu como um exercício prático para aprender e aplicar técnicas de análise de dados.
+Data Analysis é um projeto desenvolvido para me introduzir à área de análise de dados utilizando Python. A base de dados utilizada neste projeto é fictícia e foi obtida do Kaggle. Este projeto serviu como um exercício prático para aprender e aplicar técnicas de análise de dados. Este projeto foi desenvolvido em Jupyter Notebook para ter uma fácil visualização dos outputs do projeto.
 
 ## Descrição
 
