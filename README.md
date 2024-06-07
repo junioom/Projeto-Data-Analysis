@@ -31,7 +31,7 @@ import plotly.express as px
 database = 'C:/Users/gamej/OneDrive/Área de Trabalho/Data-Analysis---Projeto-Python/src/example_database/ClientesBanco.csv'
 
 database_import = pd.read_csv(database, encoding='latin1')
-pd.set_option('display.max_columns', None) # tira o limite de colunas na visualização
+pd.set_option('display.max_columns', None) 
 display(database_import)
 
 # Tratamento
@@ -41,7 +41,7 @@ database_import = database_import.drop('CLIENTNUM', axis=1)
 
 # display(database_import.info()) 
 
-database_import = database_import.dropna() # aqui estamos excluindo TODOS os valores vazios
+database_import = database_import.dropna() 
 
 # display(database_import.info())
 
